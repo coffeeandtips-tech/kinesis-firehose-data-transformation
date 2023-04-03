@@ -1,0 +1,12 @@
+bucket = "your.bucket.name.must.be.unique"
+lambda_transformation = "coffee_tips_lambda_transformation"
+lambda_filename = "lambda-kinesis-transform-1.0.jar"
+file_location = "../target/lambda-kinesis-transform-1.0.jar"
+lambda_handler = "coffeeandtips.lambda.CoffeeDataTransformation"
+kinesis_prefix = "ingest/year=!{timestamp:yyyy}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/"
+kinesis_error_output_prefix = "ingest/!{firehose:error-output-type}/year=!{timestamp:yyyy}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/"
+buffer_interval = 120
+buffer_size = 128
+compression_format = "GZIP"
+runtime = "java11"
+timeout = 120
