@@ -1,4 +1,4 @@
-package coffeeandtips.model;
+package coffee.tips.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

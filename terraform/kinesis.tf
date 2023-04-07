@@ -70,7 +70,7 @@ resource "aws_iam_policy" "firehose_policies" {
           "lambda:GetFunctionConfiguration"
         ],
         "Effect": "Allow",
-        "Resource":  [aws_lambda_function.coffee_tips_lambda_transformation.arn]
+        "Resource":  [aws_lambda_function.lambda_coffee_tips.arn]
       }
     ]
   })
